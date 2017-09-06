@@ -1,0 +1,326 @@
+@charset "utf-8";
+@import "settings";
+
+html,body{
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family:$roboto;
+  height: 100%;
+  min-height: 100%;
+}
+
+.wr{
+  max-width: 1145px;
+  margin: 0 auto;
+}
+
+header{
+  position: relative;
+
+
+  &>.row{
+    &.header-1{
+      background: map_get($gray, head);
+      border-bottom: 1px solid map_get($gray, line);
+      min-height: 40px;
+
+      &>.wr{
+        display: flex;
+        min-height:inherit;
+        align-items:center;
+        justify-content:space-between;
+
+        &>.col{
+          &.col-1{
+            a{
+              display: inline-block;
+              color: map_get($blue, head);
+              margin-right: 40px;
+              text-decoration: none;
+
+              &:last-of-type{
+                margin: 0;
+              }
+              &:hover{
+                color: map_get($blue, hover);
+              }
+              i{
+                margin-right: 8px;
+              }
+              span{
+                text-decoration: underline;
+              }
+            }
+          }
+          &.col-2{
+            a{
+              position: relative;
+              display: flex;
+              align-items:center;
+              padding: 0 20px;
+              min-height: 40px;
+              background: white;
+              border: 0 solid map_get($gray, line);
+              border-width:0 1px;
+              text-decoration: none;
+
+              i{
+                color: map_get($orange, main);
+                margin-right:8px;
+              }
+              span{
+                color: map_get($blue, main);
+              }
+              &:hover{
+                span{
+                  color: map_get($blue, hover);
+                }
+              }
+
+              &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background: white;
+                bottom: -1px;
+                left: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.header-2{
+      &>.wr{
+        min-height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        &>.col{
+          &.col-1{
+            display: flex;
+            justify-content: space-between;
+
+            &>.logo-cont{
+              margin-right: 30px;
+            }
+            &>.phones-cont{
+              display: flex;
+
+              padding-left: 45px;
+              background: url("../img/support.png") no-repeat left center;
+
+              .col{
+                margin-right: 40px;
+              }
+
+              a{
+                display: block;
+                font-size: 16px;
+                color: map_get($gray, dark);
+                text-decoration: none;
+                margin-bottom: 5px;
+
+                &:last-of-type{
+                  margin-bottom: 0;
+                }
+
+                span{
+                  color: map_get($gray, light);
+                }
+              }
+            }
+          }
+          &.col-2{
+            padding-left: 55px;
+            background: url("../img/map.png") no-repeat left center;
+
+            &>.row-1{
+              font-size: 16px;
+              color: map_get($blue, dark);
+            }
+            &>.row-2{
+              font-size: 13px;
+              color: map_get($gray, dark);
+              &>.orange{
+                color: map_get($orange, main);
+              }
+              &>.point{
+                display: inline-block;
+                width: 5px;
+                height: 5px;
+                border: 0;
+                border-radius:50%;
+                background: $green;
+                vertical-align: middle;
+                margin: 0 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.header-3{
+      background: map_get($gray, head);
+      border: solid map_get($gray, line);
+      border-width: 1px 0;
+
+      &>.wr{
+        display: flex;
+        align-items: center;
+        min-height: 50px;
+        justify-content: space-between;
+
+        &>.col{
+          &.col-1{
+            display: flex;
+
+            &>.menu-cont{
+              position: relative;
+
+              &:hover{
+                .menu-items{
+                  display: block;
+                }
+              }
+
+              a.menu-btn{
+                display: flex;
+                align-items: center;
+                padding: 0 55px 0 15px;
+                color: white;
+                font-size: 20px;
+                text-decoration: none;
+                min-height: 50px;
+                background: linear-gradient(to bottom, lighten(map_get($orange, main), 20%), map_get($orange, main));
+                transition: all 0.8s ease;
+                i{
+                  margin-right: 15px;
+                }
+
+                &:after{
+                  content: "\f105";
+                  font-family: "Flaticon";
+                  display: block;
+                  position: absolute;
+                  right: 10px;
+                  color: white;
+                  font-size: 13px;
+                  top: calc(40%);
+                }
+
+                &:hover{
+                  background: linear-gradient(to bottom, lighten(#fdb727, 10%), darken( map_get($orange, main), 10%));
+                }
+              }
+              .menu-items{
+                display: none;
+                width: 250px;
+                background: white;
+                z-index: 1;
+                position: absolute;
+
+              }
+            }
+            &>.search-cont{
+              display: flex;
+              align-items: center;
+              margin-left: 20px;
+              form{
+                display: flex;
+                height: 40px;
+                border: 1px solid map_get($gray, line);
+                border-radius: 3px;
+                background: white;
+
+                input[type="text"]{
+                  border: none;
+                  height: 30px;
+                  align-self: center;
+                  border: 0 solid map_get($gray,line);
+                  border-right-width: 1px;
+                  background: white;
+                  padding: 0 15px;
+                  color: map_get($gray, light);
+                  width: 300px;
+                }
+                button{
+                  border: 0;
+                  background: linear-gradient(to bottom, #b0da70, #7db67a);
+                  color: white;
+                  -webkit-appearance: none;
+                  font-size: 20px;
+                  padding: 0 10px;
+                  cursor: pointer;
+
+                }
+                select{
+                  border-radius: 0px;
+                  border: 0;
+                  background: white;
+                  outline: none;
+                  height: 30px;
+                  align-self: center;
+                  padding: 0 30px 0 15px;
+                  color: #666;
+                  outline: none;
+                  -webkit-appearance: none;
+                  background: url("../img/search-down-arrow.png") no-repeat calc(100% - 10px) center;
+                }
+              }
+            }
+          }
+          &.col-2{
+            a{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              padding: 0 15px 0 45px;
+              border: solid map-get($gray, line);
+              border-width: 0 1px;
+              min-height: 50px;
+              background: url("../img/bascet.png") no-repeat 10px center;
+              text-align: center;
+              text-decoration: none;
+
+              span:nth-of-type(1){
+                display: block;
+                font-size: 19px;
+                color: map_get($blue, dark);
+
+              }
+              span:nth-of-type(2){
+                display: block;
+                font-size: 13px;
+                color: map_get($gray, light);
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
