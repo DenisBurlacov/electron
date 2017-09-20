@@ -675,6 +675,7 @@ section.brands{
   border: solid map_get($gray, line);
   border-width: 1px 0;
   background: white;
+  padding: 40px;
 
   ul.brands-list{
     @extend %ul;
@@ -848,6 +849,186 @@ section.recomended{
     }
   }
 }
+section.about{
+  margin-top: 45px;
+
+
+  .wr{
+    display: flex;
+    justify-content: space-between;
+
+    &>.col-1{
+      width: percentage(285 / 1145);
+
+
+    &>.partner-list{
+
+
+      ul.grid{
+        @extend %ul;
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+
+        li{
+          max-height: 120px;
+          border-right: 1px dashed map_get($gray, line);
+          &:nth-of-type(3n+3){
+            border-right-color: transparent;
+
+          }
+          &:nth-of-type(1n+4){
+            border-top: 1px dashed map_get($gray, line);
+
+
+          }
+          &:nth-of-type(3n){
+            .title{
+              margin-top: 60px;
+            }
+        }
+          &:nth-of-type(4n){
+            .title{
+              margin-top: 50px;
+            }
+          }
+          &:nth-of-type(5n){
+            .title{
+              margin-top: 46px;
+            }
+          }
+          &:nth-of-type(6n){
+            .title{
+              margin-top: 20px;
+            }
+          }
+
+          a{
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: map_get($gray, dark);
+            font-size: 14px;
+            padding: 15px;
+
+            &:hover{
+              color: map_get($blue, hover);
+            }
+            .title{
+              margin-top:10px;
+            }
+          }
+        }
+      }
+    }
+
+
+    }
+    &>.col-2{
+      flex:1;
+      margin-left: 35px;
+
+      h2{
+        margin-top: 0 ;
+        font-size: 26px;
+        color: #583f37;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+
+      }
+    }
+  }
+}
+footer{
+  margin-top: 10px;
+  border-top: 1px solid map_get($gray, line);
+  color: $footer_color;
+  padding: 35px 0;
+
+  &>.wr{
+    &>.row-1{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      &>.col{
+        &>.for-title{
+          font-size: 20px;
+          color: map_get($gray, dark);
+          font-weight: bold;
+        }
+        &>nav>ul{
+          @extend %ul;
+          margin-top: 15px;
+
+          li{
+            margin-bottom: 15px;
+
+            a{
+              font-size: 16px;
+              color: map_get($blue, main);
+              font-weight: bold;
+
+              &:hover{
+                color: map_get($blue, hover);
+              }
+            }
+          }
+        }
+        .complain{
+          display: inline-block;
+          padding: 5px 30px 5px 10px;
+          background: map_get($orange, red);
+          color: white;
+          border: 0;
+          border-radius: 3px;
+          text-decoration: none;
+
+          &:hover{
+            background: lighten(map_get($orange, red), 5%);
+          }
+
+          i{
+            margin-right: 10px;
+          }
+        }
+        .social-cont{
+          margin-bottom: 15px;
+
+
+          a{
+            display: inline-flex;
+            margin-right: 10px;
+            height: 40px;
+            width: 40px;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            border: 2px solid map_get($blue, main);
+            border-radius: 50%;
+            color: map_get($blue, main);
+            font-size: 18px;
+
+            &:hover{
+              border: 2px solid map_get($blue, hover);
+              color: map_get($blue, hover);
+            &:last-of-type{
+              margin-right: 0;
+            }
+
+            }
+          }
+        }
+      }
+    }
+    &>.row-2{
+      font-size: 16px;
+      color: map_get($gray, dark);
+      margin-top: 30px;
+      font-weight: bold;
+    }
+  }
+}
 
 /*------------------------
 dots for sliders
@@ -919,6 +1100,15 @@ dots for sliders
   display: flex;
   justify-content: space-around;
 
+}
+.text-cont{
+  font-size: 14px;
+  line-height: 1.6;
+  color: map_get($gray, dark);
+
+}
+.text-center{
+  text-align: center;
 }
 
 

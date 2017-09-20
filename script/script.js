@@ -8,6 +8,8 @@ $('.video-slide-count').slick({
 	appendDots: $('[data-js="video-slider-btns"]')
 });
 
+
+
 $('.academy-slide-count').slick({
 	arrows: false,
 	slidesToShow: 3,
@@ -41,4 +43,13 @@ $(".brands-list").slick({
 	 dots: true,
 	 appendDots: $('[data-js="recomended-slider-btns"]')
 
+});
+
+$('.partner-list').slick({
+	arrows: false,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	vertical: true,
+	dots: true,
+	appendDots: $('[data-js="partner-slider-btns"]')
 });

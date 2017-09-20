@@ -1,2 +1,8 @@
-.idea
-.sass-cache
+
+.idea/electron.iml
+.idea/inspectionProfiles/
+.idea/modules.xml
+.idea/watcherTasks.xml
+.idea/workspace.xml
+css/.sass-cache/
+img/widget.png
