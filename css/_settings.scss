@@ -43,11 +43,22 @@ $yellow: #fdb727;
 /*--------------------
 
 ------------------- */
+$medium_size: 768px;
+
 %ul{
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
+@mixin media($size){
+  @media(max-width: $size){
+    @content;
+  }
+}
+
+
+
 /*---------------------
 m p w h
 ----------------------*/
